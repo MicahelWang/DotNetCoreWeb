@@ -1,5 +1,5 @@
 {
-  "name": "webapplication",
+  "name": "Samples.Portal",
   "version": "0.0.0",
   "private": true,
   "devDependencies": {

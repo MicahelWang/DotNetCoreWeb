@@ -9,11 +9,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using WebApplication.Data;
-using WebApplication.Models;
-using WebApplication.Services;
+using Samples.Portal.Data;
+using Samples.Portal.Models;
+using Samples.Portal.Services;
 
-namespace WebApplication
+namespace Samples.Portal
 {
     public class Startup
     {

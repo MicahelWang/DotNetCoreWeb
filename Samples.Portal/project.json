@@ -1,5 +1,5 @@
 {
-  "userSecretsId": "aspnet-WebApplication-0799fe3e-6eaf-4c5f-b40e-7c6bfd5dfa9a",
+  "userSecretsId": "aspnet-Samples.Portal-0799fe3e-6eaf-4c5f-b40e-7c6bfd5dfa9a",
 
   "dependencies": {
     "Microsoft.NETCore.App": {
@@ -107,6 +107,6 @@
   },
 
   "tooling": {
-    "defaultNamespace": "WebApplication"
+    "defaultNamespace": "Samples.Portal"
   }
 }
