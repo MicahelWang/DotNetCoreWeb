@@ -1,5 +1,6 @@
 using System;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using Samples.WebApi.Models;
 
 namespace Samples.WebApi.Controller
@@ -8,10 +9,19 @@ namespace Samples.WebApi.Controller
     [Route("api/[controller]")]
     public class UsersController : Microsoft.AspNetCore.Mvc.Controller
     {
+        private readonly ILogger<UsersController> _logger;
+        public UsersController(ILogger<UsersController> logger)
+        {
+            _logger = logger;
+        }
 
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
+            _logger.LogInformation("This is Information Log!");
+             _logger.LogWarning("This is Warning Log!");
+             _logger.LogError("This is Error Log!");
+
             var user = new User() { Id = id, Name = "Name:" + id, Sex = "Male" };
             return new ObjectResult(user);
         }
