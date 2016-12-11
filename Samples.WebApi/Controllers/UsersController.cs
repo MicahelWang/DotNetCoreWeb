@@ -14,21 +14,26 @@ namespace Samples.WebApi.Controller
         {
             _logger = logger;
         }
-
+        public IActionResult GetAll()
+        {
+            throw new Exception("Get All function faild");
+        }
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
             _logger.LogInformation("This is Information Log!");
-             _logger.LogWarning("This is Warning Log!");
-             _logger.LogError("This is Error Log!");
+            _logger.LogWarning("This is Warning Log!");
+            _logger.LogError("This is Error Log!");
 
             var user = new User() { Id = id, Name = "Name:" + id, Sex = "Male" };
             return new ObjectResult(user);
         }
 
         [HttpPost]
-        public IActionResult Post([FromBody] User user){
-            if(user == null){
+        public IActionResult Post([FromBody] User user)
+        {
+            if (user == null)
+            {
                 return BadRequest();
             }
 
@@ -38,8 +43,10 @@ namespace Samples.WebApi.Controller
         }
 
         [HttpPut("{id}")]
-        public IActionResult Put(int id, [FromBody] User user){
-            if(user == null){
+        public IActionResult Put(int id, [FromBody] User user)
+        {
+            if (user == null)
+            {
                 return BadRequest();
             }
 
@@ -48,9 +55,10 @@ namespace Samples.WebApi.Controller
         }
 
         [HttpDelete("{id}")]
-        public void Delete(int id){
+        public void Delete(int id)
+        {
             // TODO: 删除操作
-            
+
         }
     }
 }
